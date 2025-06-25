@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveDirection;
     private Transform transform;
+    private Animator animator;  
     
     [Header("Limits")]
     [SerializeField] private float limitX1;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();  
         transform = GetComponent<Transform>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Move()
     {
+        animator.SetBool("onMove", false);
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         
@@ -41,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
         
         Vector3 movePosition = (speedPlayer * Time.fixedDeltaTime * moveDirection.normalized) + rb.position;
         rb.MovePosition(movePosition);
+    
+        animator.SetFloat("MoveX", horizontal);
+        animator.SetFloat("MoveY", vertical);
+    
     }
 
 
