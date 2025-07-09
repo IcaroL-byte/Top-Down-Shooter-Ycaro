@@ -53,10 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Limits()
     {
-        if (transform.position.x > limitX1)
-        {
-            transform.position = new Vector2(limitX1, transform.position.y);
-        }
+        
 
         if (transform.position.x < limitX2)
         {
