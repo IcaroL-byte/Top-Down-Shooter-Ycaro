@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bloodborne4_0: -5432179202081824216
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

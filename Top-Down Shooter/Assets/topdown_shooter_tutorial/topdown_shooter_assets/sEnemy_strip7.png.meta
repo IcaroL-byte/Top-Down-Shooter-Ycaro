@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sEnemy_strip7_0: -2918106902554107766
+      sEnemy_strip7_1: 8624515822963100446
+      sEnemy_strip7_2: -6710327170510770155
+      sEnemy_strip7_3: -6765102282180075183
+      sEnemy_strip7_4: -7051769739562502026
+      sEnemy_strip7_5: 8975329005974275734
+      sEnemy_strip7_6: -4855478681050893451
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
