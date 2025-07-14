@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MenuMenager : MonoBehaviour
 {
     public GameObject tabela;
-    
+    public GameObject menu;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +31,13 @@ public class MenuMenager : MonoBehaviour
     public void IndoOpicoes()
     {
         tabela.SetActive(true);
+        menu.SetActive(false);
+    }
+
+    public void SaindoOpicoes()
+    {
+        tabela.SetActive(false);
+        menu.SetActive(true);
     }
     
     public void SairDosCreditos()

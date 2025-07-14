@@ -353,6 +353,7 @@ RectTransform:
   m_Children:
   - {fileID: 650657647}
   - {fileID: 1760623971}
+  - {fileID: 1217192307}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -492,6 +493,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650657646}
+  m_CullTransparentMesh: 1
+--- !u!1 &1217192306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217192307}
+  - component: {fileID: 1217192309}
+  - component: {fileID: 1217192308}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1217192307
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217192306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 542811565}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 137, y: -153}
+  m_SizeDelta: {x: 231.4232, y: 231.42322}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1217192308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217192306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -5072454938438003747, guid: 0df76eaa5102f1841a568a0517a343c0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1217192309
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217192306}
   m_CullTransparentMesh: 1
 --- !u!1 &1220504340
 GameObject:
@@ -724,6 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabela: {fileID: 0}
+  menu: {fileID: 0}
 --- !u!82 &1739334548
 AudioSource:
   m_ObjectHideFlags: 0
@@ -853,10 +930,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 542811565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 357.6357, y: -132}
-  m_SizeDelta: {x: 696.6045, y: 208.25848}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -349, y: -209.18323}
+  m_SizeDelta: {x: 696.6045, y: 362.6249}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760623972
 MonoBehaviour:
@@ -878,10 +955,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Criado Por \xCDcaro Lauan PJD2V.\n\"Disso s\xF3 os loucos sabem, que o
-    Rei tentou deter essa maldi\xE7\xE3o ao estudar as almas e criar defesas contra
-    seres vindos de reinos distantes, mas foi tra\xEDdo por fulano, que buscava o
-    Trono do Desejo para espalhar as trevas. #Jujuba.\" \n-\xCDcaro Lauan."
+  m_text: "Criado Por \xCDcaro Lauan PJD2V.\n\n\"Esse Trabalho e seu\" \n-Ian Saymon.\n\"Fejoada
+    e muito bom\"\n-Victor Manoel.\n\"Bolas massivas\"\n-Carlos Eduardo.\n\"Oque
+    e mais gay namorar um femboy ou uma tomboy?\"\n-Icaro Lauan."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dfeebf00f1fcf3a4cb3bb1e3ef5d766e, type: 2}
   m_sharedMaterial: {fileID: 4867079040244252363, guid: dfeebf00f1fcf3a4cb3bb1e3ef5d766e, type: 2}
@@ -915,7 +991,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
