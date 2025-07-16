@@ -5,6 +5,9 @@ public class MenuMenager : MonoBehaviour
 {
     public GameObject tabela;
     public GameObject menu;
+    public GameObject audio;
+    public GameObject video;
+    public GameObject controles;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,7 +34,10 @@ public class MenuMenager : MonoBehaviour
     public void IndoOpicoes()
     {
         tabela.SetActive(true);
+        controles.SetActive(true);
         menu.SetActive(false);
+        audio.SetActive(false);
+        video.SetActive(false);
     }
 
     public void SaindoOpicoes()
@@ -44,5 +50,28 @@ public class MenuMenager : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-    
+
+    public void ControlesIndo()
+    {
+        controles.SetActive(true);
+        menu.SetActive(false);
+        audio.SetActive(false);
+        video.SetActive(false);
+    }
+
+    public void AudioIndo()
+    {
+        controles.SetActive(false);
+        menu.SetActive(false);
+        audio.SetActive(true);
+        video.SetActive(false);
+    }
+
+    public void VideoIndo()
+    {
+        controles.SetActive(false);
+        menu.SetActive(false);
+        audio.SetActive(false);
+        video.SetActive(true);
+    }
 }
