@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 9593acfc87df82e49aff7412523c2efb
+guid: b2aa0063233cb4b4db2d959e7bc1a87d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6421150793343285713
-    second: sBg_0
+      213: 5947479867178969886
+    second: spr_bars_strip2_0
+  - first:
+      213: -5959845247815332281
+    second: spr_bars_strip2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sBg_0
+      name: spr_bars_strip2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 101
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d9b17630a28c1950800000000000000
-      internalID: 6421150793343285713
+      spriteID: e1b6df79d61b98250800000000000000
+      internalID: 5947479867178969886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_bars_strip2_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 2
+        width: 93
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ecaafd2506a4da0800000000000000
+      internalID: -5959845247815332281
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sBg_0: 6421150793343285713
+      spr_bars_strip2_0: 5947479867178969886
+      spr_bars_strip2_1: -5959845247815332281
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

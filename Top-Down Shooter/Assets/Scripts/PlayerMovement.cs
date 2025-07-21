@@ -15,6 +15,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float limitY1;
     [SerializeField] private float limitY2;
     
+    [Header("Life")]
+    [SerializeField]
+    private int vida;
+    [SerializeField]
+    private int energia;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,10 +39,31 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
     }
+
+    public int getVida()
+    {
+        return this.vida;
+    }
+
+    public void SetVidas(int vida)
+    {
+        this.vida = vida;
+    }
+
+    public int getEnergia()
+    {
+        return this.energia;
+    }
+
+    public void SetEnergia(int energia)
+    {
+        this.energia = energia;
+    }
     
     void Move()
     {
         animator.SetBool("onMove", false);
+        
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         
@@ -44,9 +71,11 @@ public class PlayerMovement : MonoBehaviour
         
         Vector3 movePosition = (speedPlayer * Time.fixedDeltaTime * moveDirection.normalized) + rb.position;
         rb.MovePosition(movePosition);
-    
-        animator.SetFloat("MoveX", horizontal);
-        animator.SetFloat("MoveY", vertical);
+
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        {
+            animator.SetBool("onMove", true);
+        }
     
     }
 
