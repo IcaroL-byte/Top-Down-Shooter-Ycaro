@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     private int vida;
     [SerializeField]
     private int energia;
+    public Slider vidaSlider;
+    public Slider energiaSlider;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,12 +30,17 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();  
         transform = GetComponent<Transform>();
         animator = GetComponent<Animator>();
+        vida = 100;
+        energia = 20;
     }
 
     // Update is called once per frame
     void Update()
     {
        Limits();
+        Energia();
+        vidaSlider.value = vida;
+       
     }
 
     void FixedUpdate()
@@ -99,4 +107,15 @@ public class PlayerMovement : MonoBehaviour
             transform.position = new Vector2(transform.position.x, limitY2);
         }
     }
+
+    void Energia()
+    {
+        energiaSlider.value = energia;
+
+        if(energia > 20)
+        {
+            energia = 20;
+        }
+    }
+
 }

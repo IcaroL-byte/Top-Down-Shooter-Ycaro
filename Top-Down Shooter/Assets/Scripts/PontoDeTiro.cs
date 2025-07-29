@@ -3,6 +3,15 @@ using UnityEngine;
 public class PontoDeTiro : MonoBehaviour
 {
     private SpriteRenderer srGun;
+    Vector2 dirGun;
+
+    public float angle;
+
+    public float tempoEntreTiros;
+    bool canFire = true;
+
+    [SerializeField] Transform pontoDeFogo;
+    [SerializeField] GameObject tiro;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,7 +39,19 @@ public class PontoDeTiro : MonoBehaviour
         {
             srGun.flipX = true;
         }
-        
+
+        if (Input.GetMouseButtonDown(0) && canFire)
+        {
+            canFire = false;
+            Instantiate(tiro, pontoDeFogo.position, pontoDeFogo.rotation);
+            Invoke("CDtiros", tempoEntreTiros);
+        }
+
+    }
+
+    void CDtiros()
+    {
+        canFire = true;
     }
 
 }
